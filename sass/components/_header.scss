@@ -1,0 +1,64 @@
+.header {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 0;
+}
+
+.container--flex {
+    display: flex;
+    align-items: center;
+}
+
+.contact-list {
+    @extend %list;
+    display: flex;
+    align-items: center;
+}
+
+.contact-list__item {
+    @extend %item;
+
+    &:not(:last-child) {
+        margin-right: 48px;
+    }
+
+    &:last-child {
+        min-width: 142px;
+    }
+}
+
+.contact-list__link {
+    @extend %link;
+    position: relative;
+    padding: 32px, 0;
+    color: $paragraphColor;
+    display: flex;
+    align-items: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+
+    transition-property: fill, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+
+    &:hover .contact-list__icon,
+    &:focus .contact-list__icon {
+        fill: $accentColor;
+    }
+}
+
+.contact-list__icon {
+    fill: $paragraphColor;
+    margin-right: 10px;
+    display: inline-block;
+    transition-property: fill;
+    @extend %transition;
+}

@@ -1,0 +1,52 @@
+.features-section {
+    @extend %section;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.features-list {
+    @extend %list;
+    display: flex;
+}
+
+.features-list__item {
+    @extend %item;
+    width: 270px;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.features-div {
+    width: 270px;
+    margin-bottom: 30px;
+    height: 120px;
+    background-color: $secondaryButtonColor;
+    border: none;
+    border-radius: 4px;
+
+    &__icon {
+        margin: 25px 100px;
+    }
+}
+
+.features-list__heading {
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.features-list__paragraph {
+    color: $paragraphColor;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    margin-bottom: 0;
+    margin-top: 0;
+}
