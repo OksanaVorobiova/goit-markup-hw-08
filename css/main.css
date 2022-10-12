@@ -192,6 +192,10 @@ body {
   margin: -1px;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .logo {
   color: #2196f3;
   font-family: Raleway, sans-serif;
@@ -291,6 +295,7 @@ body {
 }
 
 .header {
+  position: relative;
   border-bottom: 1px solid #eee;
   margin-bottom: 0;
 }
@@ -367,14 +372,27 @@ body {
   border: none;
   background-color: transparent;
 }
-.menu-button .menu-button .icon-cross {
+.menu-button .icon-cross {
   display: none;
 }
-.menu-button .menu-button.is-open .icon-cross {
+.menu-button .is-open .icon-cross {
   display: block;
 }
-.menu-button .menu-button.is-open .icon-menu {
+.menu-button .is-open .icon-menu {
   display: none;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 48px 40px;
+}
+.menu-container .is-open {
+  display: block;
 }
 
 .hero-section {

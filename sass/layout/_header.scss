@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     border-bottom: 1px solid #eee;
     margin-bottom: 0;
 }
@@ -63,24 +64,38 @@
     @extend %transition;
 }
 
-.menu-button {
+.menu-button { 
     display: inline-flex;
     margin: 0;
     padding: 0;
     border: none;
     background-color: transparent;
 
-        .menu-button .icon-cross {
+        .icon-cross {
                 display: none;
             }
         
-        .menu-button.is-open .icon-cross {
+        .is-open .icon-cross {
                 display: block;
             }
         
-        .menu-button.is-open .icon-menu {
+        .is-open .icon-menu {
                 display: none;
             }
+}
+
+.menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $primaryColor;
+    padding: 48px 40px;
+
+        .is-open {
+            display: block;
+        }
 }
 
 

@@ -16,7 +16,7 @@
     <div class="container--flex container">
     <a href="./index.html" class="logo logo-header">Web<span class="logo--black">Studio</span></a>
     <nav class="navigation">
-        <button class="menu-button is-open" type="button" data-menu-button aria-expanded="false">
+        <button class="menu-button js-open-menu burger" type="button" aria-expanded="false" aria-controls="menu-container">
             <svg class="burger__svg" width="40" height="40" aria-label="Перемикач мобільного меню">
                 <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
                 <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
@@ -50,6 +50,8 @@
             +38 096 111 11 11</a>
         </li>
     </ul>
+    </div>
+    <div class="menu-container js-menu-container" id="menu-container" aria-exanded="false">
     </div>
    </header> 
    <main>
