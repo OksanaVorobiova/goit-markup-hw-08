@@ -91,6 +91,16 @@
         letter-spacing: 0.03em;
         color: $paragraphColor;
         width: 400px;
+
+            @media screen and (max-width: 1200px) {
+                    display: flex;
+                    justify-content: center;
+                    max-width: 346px;
+                    max-height: 14px;
+                    font-size: 12px;
+                    line-height: 1.2;
+                    margin-left: 8px;
+                }
     }
 
     &__contract {
@@ -140,12 +150,13 @@
         justify-content: center;
         margin-left: 13px;
         margin-top: 8px;
+
+            @media screen and (max-width: 1200px) {
+                    max-width: 370px;
+                    max-height: 24px;
+                }
     }
 
-    @media screen and (max-width: 1200px) {
-        max-width: 370px;
-        max-height: 24px;
-    }
 }
 
 .modal-form__input {
@@ -169,7 +180,7 @@
         transform: translateY(-50%);
         width: 16px;
         height: 15px;
-        margin: 0 8.38px 0 0;
+        margin: 0 8px 0 0;
         border-radius: 2px;
         display: block;
         appearance: none;

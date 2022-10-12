@@ -911,6 +911,21 @@ body {
   color: #757575;
   width: 400px;
 }
+@media screen and (max-width: 1200px) {
+  .modal-form__span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 346px;
+    max-height: 14px;
+    font-size: 12px;
+    line-height: 1.2;
+    margin-left: 8px;
+  }
+}
 .modal-form__contract {
   color: #2196f3;
   display: inline-block;
@@ -991,7 +1006,7 @@ body {
   margin-top: 8px;
 }
 @media screen and (max-width: 1200px) {
-  .modal-form__label {
+  .modal-form__label--checkbox {
     max-width: 370px;
     max-height: 24px;
   }
@@ -1016,7 +1031,7 @@ body {
           transform: translateY(-50%);
   width: 16px;
   height: 15px;
-  margin: 0 8.38px 0 0;
+  margin: 0 8px 0 0;
   border-radius: 2px;
   display: block;
   -webkit-appearance: none;
