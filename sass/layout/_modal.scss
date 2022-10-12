@@ -7,6 +7,8 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     visibility: visible;
+    padding: 93px 15px 94px 15px;
+    overflow-y: scroll;
 
     transition: opacity, visibility $transitionDuration $cubicBezier;
 }
@@ -33,6 +35,10 @@
     background-color: $primaryColor;
     transform: translate(-50%, -50%) scale(1);
     transition: transform $transitionDuration $cubicBezier;
+
+        @media screen and (max-width: 1200px) {
+            width: 450px;
+        }
 }
 
 .modal-close {
@@ -120,6 +126,7 @@
 
 .modal-form__label {
     position: relative;
+    width: 425px;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.2;
@@ -133,6 +140,11 @@
         justify-content: center;
         margin-left: 13px;
         margin-top: 8px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        max-width: 370px;
+        max-height: 24px;
     }
 }
 
