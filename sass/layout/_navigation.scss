@@ -10,6 +10,10 @@
         justify-content: space-between;
         margin-right: 344px;
     }
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 .navigation-list__item {

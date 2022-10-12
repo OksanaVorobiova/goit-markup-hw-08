@@ -13,6 +13,10 @@
     @extend %list;
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 .contact-list__item {
@@ -64,38 +68,48 @@
     @extend %transition;
 }
 
-.menu-button { 
+.burger { 
     display: inline-flex;
     margin: 0;
     padding: 0;
     border: none;
     background-color: transparent;
+        
+        .is-open .burger__menu {
+                display: none;
+            }
 
-        .icon-cross {
-                display: none;
-            }
-        
-        .is-open .icon-cross {
-                display: block;
-            }
-        
-        .is-open .icon-menu {
-                display: none;
-            }
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
 }
 
 .menu-container {
-    display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: $primaryColor;
     padding: 48px 40px;
+    z-index: 1000;
+    transform: translateX(100vw);
+    transition: transform $transitionDuration $cubicBezier;
 
-        .is-open {
-            display: block;
+        &__button {
+            display: inline-flex;
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            border: none;
         }
+
+}
+
+.menu-container.is-open {
+    display: block;
+    z-index: 1000;
+    transform: translateX(0);
 }
 
 

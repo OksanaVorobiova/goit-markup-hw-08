@@ -271,6 +271,11 @@ body {
           justify-content: space-between;
   margin-right: 344px;
 }
+@media screen and (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
+}
 
 .navigation-list__item {
   padding: 32px, 0;
@@ -316,6 +321,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .contact-list {
+    display: none;
+  }
 }
 
 .contact-list__item:not(:last-child) {
@@ -363,7 +373,7 @@ body {
   transition-property: fill;
 }
 
-.menu-button {
+.burger {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -372,27 +382,46 @@ body {
   border: none;
   background-color: transparent;
 }
-.menu-button .icon-cross {
+.burger .is-open .burger__menu {
   display: none;
 }
-.menu-button .is-open .icon-cross {
-  display: block;
-}
-.menu-button .is-open .icon-menu {
-  display: none;
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
 }
 
 .menu-container {
-  display: none;
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: #fff;
   padding: 48px 40px;
+  z-index: 1000;
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.menu-container .is-open {
+.menu-container__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.menu-container.is-open {
   display: block;
+  z-index: 1000;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .hero-section {
