@@ -208,10 +208,16 @@ body {
   color: #2196f3;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
   text-decoration: none;
   letter-spacing: 0.03em;
+}
+@media (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.4;
+  }
 }
 .logo--black {
   color: #000;
@@ -224,8 +230,17 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
-  margin-top: 24px;
-  margin-bottom: 25px;
+  padding: 16px 0;
+}
+@media (min-width: 768px) {
+  .logo-header {
+    padding: 26px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .logo-header {
+    padding: 24px 0 25px;
+  }
 }
 .logo-footer {
   display: block;
@@ -320,15 +335,6 @@ body {
   }
 }
 
-.container--flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .contact-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -390,7 +396,7 @@ body {
 
 .burger {
   position: absolute;
-  top: 10px;
+  bottom: 10px;
   right: 15px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
