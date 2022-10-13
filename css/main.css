@@ -13,25 +13,6 @@
   display: inline-block;
 }
 
-.navigation-list__link {
-  position: relative;
-  display: block;
-  padding: 32px 0;
-  color: var(--primary-heading-color);
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.1;
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .client-link, .contact-list__icon {
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
@@ -165,7 +146,6 @@ body {
   color: #212121;
   font-family: Roboto, sans-serif;
   width: 100vw;
-  overflow: hidden;
 }
 
 .image {
@@ -275,39 +255,25 @@ body {
   color: #fff;
 }
 
-.navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  width: 573px;
-  margin-left: 93px;
-}
-.navigation-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-right: 344px;
-}
-@media screen and (max-width: 768px) {
-  .navigation {
-    display: none;
-  }
-}
-
 .navigation-list__item {
-  padding: 32px, 0;
+  display: block;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
 }
 .navigation-list__item:not(:last-child) {
-  margin-right: 48px;
+  margin-bottom: 32px;
 }
 
+.navigation-list__link {
+  text-decoration: none;
+  color: #212121;
+}
 .navigation-list__link:hover, .navigation-list__link:focus {
+  color: #2196f3;
+}
+.navigation-list__link--after {
   color: #2196f3;
 }
 .navigation-list__link--after::after {
@@ -332,20 +298,6 @@ body {
 @media (min-width: 768px) {
   .header {
     height: 80px;
-  }
-}
-
-.contact-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-@media screen and (max-width: 768px) {
-  .contact-list {
-    display: none;
   }
 }
 
@@ -396,7 +348,9 @@ body {
 
 .burger {
   position: absolute;
-  bottom: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: 15px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -450,6 +404,11 @@ body {
   z-index: 1000;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+@media (min-width: 768px) {
+  .menu-container.is-open {
+    display: none;
+  }
 }
 
 .hero-section {

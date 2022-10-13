@@ -14,12 +14,7 @@
 
 .contact-list {
     @extend %list;
-    display: flex;
-    align-items: center;
 
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
 }
 
 .contact-list__item {
@@ -73,7 +68,8 @@
 
 .burger { 
     position: absolute;
-    top: 50%
+    top: 50%;
+    transform: translateY(-50%);
     right: 15px;
     display: inline-flex;
     margin: 0;
@@ -105,7 +101,7 @@
 
         &__button {
             position: absolute;
-            top: 50%;
+            top: 10px;
             right: 15px;
             display: inline-flex;
             margin: 0;
@@ -120,6 +116,10 @@
     display: block;
     z-index: 1000;
     transform: translateX(0);
+
+        @media (min-width: 768px) {
+            display: none;
+        }
 }
 
 

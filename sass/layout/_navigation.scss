@@ -1,36 +1,36 @@
 .navigation {
-    display: flex;
-    align-items: flex-end;
-    width: 573px;
-    margin-left: 93px;
 
     &-list {
         @extend %list;
-        display: flex;
-        justify-content: space-between;
-        margin-right: 344px;
+        
     }
 
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
 }
 
 .navigation-list__item {
     @extend %item;
-    padding: 32px, 0;
+    display: block;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 
     &:not(:last-child) {
-        margin-right: 48px;
+        margin-bottom: 32px;
     }
 }
 
 .navigation-list__link {
     @extend %link;
-    @extend %linkInHeader;
+    text-decoration: none;
+    color: $headingColor;
 
     &:hover,
     &:focus {
+        color: $accentColor;
+    }
+
+    &--after {
         color: $accentColor;
     }
 
