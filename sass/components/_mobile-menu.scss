@@ -29,7 +29,6 @@
     z-index: 1000;
     transform: translateX(100vw);
     transition: transform $transitionDuration $cubicBezier;
-    overflow-y: scroll;
 
     &__button {
         position: absolute;
