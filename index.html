@@ -13,13 +13,26 @@
 </head>
 <body>
    <header class="header">
-    <div class="container--flex container">
+    <div class="container">
     <a href="./index.html" class="logo logo-header">Web<span class="logo--black">Studio</span></a>
     <button class="burger js-open-menu burger" type="button" aria-expanded="false" aria-controls="menu-container">
         <svg class="burger__svg" width="40" height="40" aria-label="Перемикач мобільного меню">
             <use class="burger__menu" href="./images/icons.svg#icon-menu"></use>
         </svg>
     </button>
+    <nav class="nav-flex">
+        <ul class="nav-flex__list">
+            <li class="nav-flex__item">
+                <a href="./index.html" class="nav-flex__link nav-flex__link--after">Студія</a>
+            </li>
+            <li class="nav-flex__item">
+                <a href="./portfolio.html" class="nav-flex__link">Портфоліо</a>
+            </li>
+            <li class="nav-flex__item">
+                <a href="#" class="nav-flex__link">Контакти</a>
+            </li>
+        </ul>
+    </nav>
     </div>
     <div class="menu-container js-menu-container" id="menu-container" aria-exanded="false">
         <button type="button" class="js-close-menu menu-container__button">

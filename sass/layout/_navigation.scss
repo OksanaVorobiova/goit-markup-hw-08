@@ -5,11 +5,7 @@
         @extend %list;
 
         @media (min-width: 768px) {
-                display: flex;
-                position: absolute;
-                top: 0;
-                left: 236px; 
-                margin-bottom: 0;
+                display: none;
             }
     }
 }
@@ -25,10 +21,6 @@
         &:not(last-child) {
             margin-bottom: 32px;
         }
-
-    @media (min-width: 768px) {
-        font-size: 14px;
-    } 
 }
 
 .navigation-list__link {
@@ -41,28 +33,64 @@
         color: $accentColor;
     }
 
-    &--after {
-        color: $accentColor;
-    }
+}
 
-    &--after::after {
-        display: none;
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        content: '';
-        width: 100%;
-        height: 4px;
-        background-color: $accentColor;
-        border-radius: 2px;
-        opacity: 1;
 
-        @media (min-width: 768px) {
-            display: block;
-        }
-    }
+ .nav-flex__link--after::after {
+     display: none;
+     position: absolute;
+     bottom: -2px;
+     left: 0;
+     content: '';
+     width: 100%;
+     height: 4px;
+     background-color: $accentColor;
+     border-radius: 2px;
+     opacity: 1;
+
+ }
+
+.nav-flex {
+    display: none;
+    margin: 0 96px 0 72px;
 
     @media (min-width: 768px) {
-        padding: 32px 0;
+        display: inline-block;
     }
+}
+
+.nav-flex__list {
+    @extend %list;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-flex__item {
+@extend %item;
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.nav-flex__link {
+    padding: 32px 0 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: $headingColor;
+    text-decoration: none;
+
+        &--after {
+            color: $accentColor;
+        }
+
+        &--after::after {
+            display: block;
+            width: 47px;
+            height: 4px;
+            border-radius: 4px;
+            background-color: $accentColor;
+        }
 }
