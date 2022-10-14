@@ -358,6 +358,18 @@ body {
 .navigation {
   margin-bottom: 302px;
 }
+@media (min-width: 768px) {
+  .navigation-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 236px;
+    margin-bottom: 0;
+  }
+}
+
 .navigation-list__item {
   display: block;
   font-weight: 500;
@@ -365,8 +377,13 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
-.navigation-list__item:not(:last-child) {
+.navigation-list__item:not(last-child) {
   margin-bottom: 32px;
+}
+@media (min-width: 768px) {
+  .navigation-list__item {
+    font-size: 14px;
+  }
 }
 
 .navigation-list__link {
@@ -389,6 +406,11 @@ body {
   background-color: #2196f3;
   border-radius: 2px;
   opacity: 1;
+}
+@media (min-width: 768px) {
+  .navigation-list__link {
+    padding: 32px 0;
+  }
 }
 
 .header {
