@@ -1,15 +1,15 @@
-.filter-list__item, .footer-list__item, .address__item, .client-list__item, .features-list__item, .work-list__item, .social-list__item, .contact-list__item, .nav-flex__item, .navigation-list__item {
+.filter-list__item, .footer-list__item, .address__item, .client-list__item, .features-list__item, .work-list__item, .social-list__item, .contacts__item, .contact-list__item, .nav-flex__item, .navigation-list__item {
   list-style-type: none;
   margin-bottom: 0;
 }
 
-.card-list, .filter-list, .footer-list, .address__list, .client-list, .features-list, .work-list, .social-list, .command-list, .contact-list, .nav-flex__list, .navigation-list, .socials-mobile {
+.card-list, .filter-list, .footer-list, .address__list, .client-list, .features-list, .work-list, .social-list, .command-list, .contacts, .contact-list, .nav-flex__list, .navigation-list, .socials-mobile {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.contact-list__link, .navigation-list__link, .socials-mobile__link {
+.contacts__link, .contact-list__link, .navigation-list__link, .socials-mobile__link {
   display: inline-block;
 }
 
@@ -542,6 +542,66 @@ body {
   display: inline-block;
   -webkit-transition-property: fill;
   transition-property: fill;
+}
+
+.contacts {
+  display: none;
+}
+@media (min-width: 768px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 15px;
+  }
+}
+
+.contacts__item:first-child {
+  margin-bottom: 10px;
+  padding-top: 21px;
+}
+.contacts__item:last-child {
+  margin-bottom: 21px;
+}
+
+.contacts__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #757575;
+  text-decoration: none;
+}
+
+.contacts__icon {
+  fill: #757575;
+  margin-right: 8px;
+}
+
+@media (min-width: 768px) {
+  .contacts__icon--envelope {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contacts__icon--phone {
+    width: 10px;
+    height: 14px;
+  }
 }
 
 .hero-section {

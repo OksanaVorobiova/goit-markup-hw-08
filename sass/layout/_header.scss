@@ -76,6 +76,63 @@
     @extend %transition;
 }
 
+.contacts {
+    display: none;
+    @extend %list;
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 15px;
+    }
+}
+
+.contacts__item {
+    @extend %item;
+
+        &:first-child {
+            margin-bottom: 10px;
+            padding-top: 21px;
+        }
+
+        &:last-child {
+            margin-bottom: 21px;
+        }
+}
+
+.contacts__link {
+    @extend %link;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: $paragraphColor;
+    text-decoration: none;
+}
+
+.contacts__icon {
+    fill: $paragraphColor;
+    margin-right: 8px;
+}
+
+.contacts__icon--envelope {
+    @media (min-width: 768px) {
+        width: 14px;
+        height: 10px;
+    }
+}
+
+.contacts__icon--phone {
+    @media (min-width: 768px) {
+        width: 10px;
+        height: 14px;
+    }
+}
+
 
 
 
