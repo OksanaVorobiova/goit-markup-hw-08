@@ -423,6 +423,12 @@ body {
             align-items: center;
   }
 }
+@media (min-width: 1200px) {
+  .nav-flex {
+    margin-left: 92px;
+    margin-right: 315px;
+  }
+}
 .nav-flex__list {
   display: -webkit-box;
   display: -ms-flexbox;
