@@ -74,6 +74,10 @@
     display: inline-block;
     transition-property: fill;
     @extend %transition;
+
+    &:hover, &:focus {
+        fill: $accentColor;
+    }
 }
 
 .contacts {
@@ -86,6 +90,11 @@
         position: absolute;
         top: 0;
         right: 15px;
+    }
+
+    @media (min-width: 1200px) {
+        flex-direction: row;
+        align-items: center;
     }
 }
 
@@ -100,6 +109,11 @@
         &:last-child {
             margin-bottom: 21px;
         }
+
+        @media (min-width: 1200px) {
+            padding: 32px 0;
+            margin-bottom: 0;
+        }
 }
 
 .contacts__link {
@@ -112,11 +126,36 @@
     letter-spacing: 0.02em;
     color: $paragraphColor;
     text-decoration: none;
+    @extend %transitionFill;
+    @extend %transitionColor;
+
+    &:hover, &:focus {
+        color: $accentColor;
+    }
+
+    &:hover .contacts__icon,
+    &:focus .contacts__icon {
+        color: $accentColor;
+        fill: $accentColor;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 14px;
+
+            &:first-child {
+                margin-right: 30px;
+            }
+    }
 }
 
 .contacts__icon {
     fill: $paragraphColor;
     margin-right: 8px;
+    @extend %transitionFill;
+
+        &:hover, &:focus {
+            fill: $accentColor;
+        }
 }
 
 .contacts__icon--envelope {
@@ -124,12 +163,22 @@
         width: 14px;
         height: 10px;
     }
+
+    @media (min-width: 1200px) {
+        width: 16px;
+        height: 12px;
+    }
 }
 
 .contacts__icon--phone {
     @media (min-width: 768px) {
         width: 10px;
         height: 14px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 10px;
+        height: 16px;
     }
 }
 

@@ -54,7 +54,7 @@
   letter-spacing: 0.03em;
 }
 
-.modal-form__input + .modal-form__icon, .modal-close__use, .modal-close, .client-link__logo, .social-link__card {
+.modal-form__input + .modal-form__icon, .modal-close__use, .modal-close, .client-link__logo, .social-link__card, .contacts__icon, .contacts__link {
   -webkit-transition-property: fill;
   transition-property: fill;
   -webkit-transition-duration: 250ms;
@@ -63,7 +63,7 @@
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address__contact, .address__location {
+.address__contact, .address__location, .contacts__link {
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 250ms;
@@ -543,6 +543,9 @@ body {
   -webkit-transition-property: fill;
   transition-property: fill;
 }
+.contact-list__icon:hover, .contact-list__icon:focus {
+  fill: #2196f3;
+}
 
 .contacts {
   display: none;
@@ -561,6 +564,17 @@ body {
     right: 15px;
   }
 }
+@media (min-width: 1200px) {
+  .contacts {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 
 .contacts__item:first-child {
   margin-bottom: 10px;
@@ -568,6 +582,12 @@ body {
 }
 .contacts__item:last-child {
   margin-bottom: 21px;
+}
+@media (min-width: 1200px) {
+  .contacts__item {
+    padding: 32px 0;
+    margin-bottom: 0;
+  }
 }
 
 .contacts__link {
@@ -584,10 +604,28 @@ body {
   color: #757575;
   text-decoration: none;
 }
+.contacts__link:hover, .contacts__link:focus {
+  color: #2196f3;
+}
+.contacts__link:hover .contacts__icon, .contacts__link:focus .contacts__icon {
+  color: #2196f3;
+  fill: #2196f3;
+}
+@media (min-width: 1200px) {
+  .contacts__link {
+    font-size: 14px;
+  }
+  .contacts__link:first-child {
+    margin-right: 30px;
+  }
+}
 
 .contacts__icon {
   fill: #757575;
   margin-right: 8px;
+}
+.contacts__icon:hover, .contacts__icon:focus {
+  fill: #2196f3;
 }
 
 @media (min-width: 768px) {
@@ -596,11 +634,23 @@ body {
     height: 10px;
   }
 }
+@media (min-width: 1200px) {
+  .contacts__icon--envelope {
+    width: 16px;
+    height: 12px;
+  }
+}
 
 @media (min-width: 768px) {
   .contacts__icon--phone {
     width: 10px;
     height: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  .contacts__icon--phone {
+    width: 10px;
+    height: 16px;
   }
 }
 
