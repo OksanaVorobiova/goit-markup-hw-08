@@ -63,7 +63,7 @@
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address__contact, .address__location, .contacts__link {
+.address__contact, .address__location, .contacts__link, .nav-flex__link {
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 250ms;
@@ -457,6 +457,9 @@ body {
   line-height: 1.2;
 }
 .nav-flex__link--after {
+  color: #2196f3;
+}
+.nav-flex__link:hover, .nav-flex__link:focus {
   color: #2196f3;
 }
 

@@ -80,10 +80,15 @@ align-items: center;
 .nav-flex__link {
     @extend %linkInHeader;
     line-height: 1.2;
+    @extend %transitionColor;
 
         &--after {
             color: $accentColor;
         }     
+
+        &:hover, &:focus {
+            color: $accentColor;
+        }
 }
 
 .nav-flex__link--after::after {
