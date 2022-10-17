@@ -1,9 +1,8 @@
 .hero-section {
     padding: 118px 60px;
     text-align: center;
-    margin: 0 auto;
-    width: 480px;
-    height: 400px;
+    max-width: 100vw;;
+    height: auto;
     background-image: linear-gradient(to right, rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)),
         url('/images/header-mobile.jpg');
     background-size: cover;
@@ -16,49 +15,61 @@
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
                 background-image: linear-gradient(to right, rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)),
-                    url('/images/header-mob@2x.jpg');
-            
+                    url('/images/header-mob@2x.jpg');  
         }
 
-    @media (min-width: 480px) {
-        width: 768px;
+    @media (min-width: 768px) {
+        padding: 118px 204px;
         background-image: linear-gradient(to right, rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)),
                 url('/images/header-tablet.jpg');
 
         @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
-                .hero-section {
                 background-image: linear-gradient(to right, rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)),
                     url('/images/header-tab@2x.jpg');
                 }
-            }
+            
     }
 
     @media (min-width: 1200px) {
-        width: 1600px;
-        height: 600px;
+        padding: 200px 452px;
         background-image: linear-gradient(to right, rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)),
-            url('/images/header-tablet.jpg');
+            url('/images/header-desctop.jpg');
     
         @media (min-device-pixel-ratio: 2),
             (min-resolution: 192dpi),
             (min-resolution: 2dppx) {
-                .hero-section {
                     background-image: linear-gradient(to right, rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)),
-                        url('/images/header-tab@2x.jpg');
+                        url('/images/hero-desc@2x.jpg');
                 }
-            }
     }
 
     &__heading {
-        max-width: 696px;
         margin: 0 auto 30px;
         color: $primaryColor;
         font-weight: 900;
-        font-size: 44px;
-        line-height: 1.4;
+        font-size: 26px;
+        line-height: 1.6;
         text-transform: uppercase;
         letter-spacing: 0.06em;
+
+        @media (min-width: 1200px) {
+            font-size: 44px;
+            line-height: 1.4;
+        }
+    }
+}
+
+.container-hero {
+    text-align: center;
+    margin: 0 auto;
+
+    @media (min-width: 480px) {
+        width: 360px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 696px;
     }
 }
