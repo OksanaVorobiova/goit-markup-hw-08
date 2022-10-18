@@ -737,6 +737,13 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.command-section__heading {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+}
 
 .command-list__item {
   background-color: #fff;
@@ -749,6 +756,7 @@ body {
 }
 
 .member-description {
+  width: 100%;
   text-align: center;
   padding-bottom: 24px;
   padding-top: 30px;
