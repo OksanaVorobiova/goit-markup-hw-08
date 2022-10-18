@@ -2,6 +2,10 @@
     @extend %section;
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @media (min-width: 1200px) {
+        padding: 94px 0 94px;
+    }
 }
 
 .features-list {
@@ -10,7 +14,6 @@
     @media (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 15px;
     }
 }
 
@@ -39,6 +42,15 @@
             margin-bottom: 0;
         }
     }
+
+    @media (min-width: 1200px) {
+        width: calc((100% - 3 * 30px) / 4);
+        margin-bottom: 0;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
 }
 
 .features-div {
@@ -59,6 +71,10 @@
 
     @media (min-width: 768px) {
         width: 354px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 270px;
     }
 }
 
