@@ -1,28 +1,43 @@
 .clients {
     @extend %section;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
+    @media (max-width: 1200px) {
+
+    &__heading {
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+}
 }
 
 .client-list {
     @extend %list;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 15px;
 }
 
 .client-list__item {
     @extend %item;
+    margin-bottom: 30px;
+    width: calc((100% - 30px) / 2);
 
-    &:not(:last-child) {
+    &:nth-child(2n-1) {
         margin-right: 30px;
+    }
+
+    &:nth-last-child(-n+2) {
+        margin-bottom: 0;
     }
 }
 
 .client-link {
-    display: block;
-    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 92px;
     border: 1px solid $socialIcons;
     border-radius: 4px;
@@ -47,7 +62,6 @@
 
     &__logo {
         fill: $socialIcons;
-        margin: 16px 32px;
         @extend %transitionFill;
     }
 }
