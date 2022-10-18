@@ -734,41 +734,33 @@ body {
 
 .command-section {
   background-color: #f5f4fa;
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.command-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .command-list__item {
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 100vw;
 }
 .command-list__item:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .member-description {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   padding-top: 30px;
 }
 .member-description__name {
-  margin-bottom: 10px;
-  margin-top: 0;
+  margin: 0 auto 10px auto;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
 }
 .member-description__paragraph {
-  margin-top: 0;
-  margin-bottom: 0;
   color: #757575;
   font-weight: 400;
   font-size: 16px;
@@ -781,6 +773,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-top: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -874,6 +869,9 @@ body {
   }
 }
 
+.features-list {
+  margin: 0 15px 0 15px;
+}
 @media (min-width: 768px) {
   .features-list {
     display: -webkit-box;

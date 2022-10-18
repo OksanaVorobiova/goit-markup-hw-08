@@ -10,6 +10,7 @@
 
 .features-list {
     @extend %list;
+    margin: 0 15px 0 15px;
 
     @media (min-width: 768px) {
         display: flex;

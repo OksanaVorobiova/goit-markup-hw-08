@@ -1,33 +1,32 @@
 .command-section {
     @extend %section;
     background-color: $secondaryButtonColor;
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
 }
 
 .command-list {
     @extend %list;
-    display: flex;
 }
 
 .command-list__item {
     background-color: $primaryColor;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 100vw;
 
     &:not(:last-child) {
-        margin-right: 30px;
+        margin-bottom: 30px;
     }
 }
 
 .member-description {
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
     padding-top: 30px;
 
     &__name {
-        margin-bottom: 10px;
-        margin-top: 0;
+        margin: 0 auto 10px auto;
         font-weight: 500;
         font-size: 16px;
         line-height: 1.2;
@@ -35,8 +34,6 @@
     }
 
     &__paragraph {
-        margin-top: 0;
-        margin-bottom: 0;
         color: $paragraphColor;
         font-weight: 400;
         font-size: 16px;
@@ -49,6 +46,7 @@
     @extend %list;
     display: flex;
     margin-top: 16px;
+    align-items: center;
     justify-content: center;
 }
 
