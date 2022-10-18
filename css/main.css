@@ -745,6 +745,9 @@ body {
   margin-bottom: 30px;
 }
 
+.command-list {
+  padding: 0 15px;
+}
 @media (min-width: 768px) {
   .command-list {
     display: -webkit-box;
@@ -768,6 +771,18 @@ body {
   .command-list__item {
     width: 450px;
     margin: 0 auto 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  .command-list__item {
+    width: 354px;
+    margin-left: 0;
+  }
+  .command-list__item:nth-child(2n-1) {
+    margin-right: 30px;
+  }
+  .command-list__item:nth-last-child(-n+2) {
+    margin-bottom: 0;
   }
 }
 
@@ -889,6 +904,9 @@ body {
   }
 }
 
+.features-list {
+  padding: 0 15px;
+}
 @media (min-width: 768px) {
   .features-list {
     display: -webkit-box;
