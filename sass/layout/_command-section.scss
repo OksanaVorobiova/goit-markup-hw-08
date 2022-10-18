@@ -16,6 +16,11 @@
 
 .command-list {
     @extend %list;
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .command-list__item {
@@ -25,6 +30,11 @@
 
     &:not(:last-child) {
         margin-bottom: 30px;
+    }
+
+    @media (min-width: 480px) {
+        width: 450px;
+        margin: 0 auto 0 auto;
     }
 }
 
@@ -61,10 +71,6 @@
 
 .social-list__item {
     @extend %item;
-
-    &:not(:last-child) {
-        margin-right: 10px;
-    }
 }
 
 .social-link {
