@@ -819,13 +819,21 @@ body {
 }
 
 .work-section {
-  padding-bottom: 94px;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .work-section {
+    display: block;
+    padding-bottom: 94px;
+  }
 }
 
-.work-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (min-width: 1200px) {
+  .work-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .work-list__item:not(:last-child) {
