@@ -110,15 +110,16 @@
         margin-left: 8px;
         font-weight: 400px;
         font-size: 12px;
-        line-height: 1.7;
+        line-height: 1.2;
         letter-spacing: 0.03em;
         color: $paragraphColor;
-        width: 346px;
-        height: 14px;
+        width: 100%;
+        height: auto;
 
             @media (min-width: 1200px) {
                 font-size: 14px;
                 width: 400px;
+                line-height: 1.7;
             }
         }
     
@@ -126,6 +127,7 @@
     &__contract {
         color: $accentColor;
         display: inline-block;
+        line-height: 1.2;
     }
 
     @media (min-width: 1200px) {
