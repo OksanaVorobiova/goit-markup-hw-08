@@ -33,8 +33,7 @@
     }
 
     &:hover,
-    &:focus,
-    &:: {
+    &:focus {
         color: $accentColor;
     }
 }
@@ -43,9 +42,10 @@
     position: absolute;
     top: 0;
     display: none;
-    margin-left: 72px;
+    margin-left: 87px;
     width: 283px;
     margin-right: 96px;
+    height: 100%;
 
     @media (min-width: 768px) {
         display: inline-flex;
@@ -99,7 +99,9 @@ align-items: center;
     height: 4px;
     border-radius: 2px;
     background-color: $accentColor;
-    bottom: 2px;
+    bottom: 0;
 
-
+    @media (min-width: 1200px) {
+        bottom: -2px;
+    }
 }
