@@ -952,7 +952,7 @@ body {
 }
 
 .features-list__item {
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
 }
 .features-list__item:not(:last-child) {
@@ -960,13 +960,13 @@ body {
 }
 @media (min-width: 480px) {
   .features-list__item {
-    width: 450px;
+    width: 100%;
   }
 }
 @media (min-width: 768px) {
   .features-list__item {
     margin-left: 0;
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 30px) / 2);
   }
   .features-list__item:nth-child(2n-1) {
     margin-right: 30px;
@@ -995,7 +995,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100vw;
+  width: 100%;
   margin-bottom: 30px;
   height: 120px;
   background-color: #f5f4fa;
@@ -1004,7 +1004,7 @@ body {
 }
 @media (min-width: 480px) {
   .features-div {
-    width: 450px;
+    width: 100%;
   }
 }
 @media (min-width: 768px) {
