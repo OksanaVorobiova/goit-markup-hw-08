@@ -36,8 +36,8 @@
     }
 
     &-footer {
-        display: block;
+        display: inline-block;
         width: 154px;
-        margin: 0 auto 20px auto;
+        margin-bottom: 20px;
     }
 }

@@ -6,11 +6,25 @@
 
     &-contacts {
         text-align: center;
+
+        @media (min-width: 768px) {
+            width: 232px;
+            margin-left: 76px;
+        }
     }
 }
 
 .container-footer {
     width: 100vw;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+    }
 }
 
 .address {
@@ -57,6 +71,13 @@
 .footer-socials {
     margin: 60px auto;
     text-align: center;
+
+    @media (min-width: 768px) {
+        width: 206px;
+        margin-left: 165px;
+        margin-top: 0;  
+        margin-bottom: 0; 
+    }
 
     &__heading {
         color: $primaryColor;
@@ -111,6 +132,10 @@
 
     @media (min-width: 480px) {
         width: 450px;
+    }
+
+    @media (min-width: 768px) {
+        margin-top: 60px;
     }
 }
 
