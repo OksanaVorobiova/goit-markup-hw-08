@@ -7,8 +7,6 @@ body {
     background-color: $primaryColor;
     color: $headingColor;
     font-family: Roboto, sans-serif;
-
-
 }
 
 .image {
@@ -21,6 +19,8 @@ body {
     margin-right: auto;
     overflow: hidden;
     height: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 
         @media (min-width: 480px) {
             max-width: 480px;
@@ -32,8 +32,6 @@ body {
 
         @media (min-width: 1200px) {
             max-width: 1200px;
-            padding-left: 15px;
-            padding-right: 15px;
         }
 }
 

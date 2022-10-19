@@ -33,10 +33,10 @@
     }
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:: {
         color: $accentColor;
     }
-
 }
 
 .nav-flex {

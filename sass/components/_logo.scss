@@ -24,10 +24,10 @@
     &-header {
         box-sizing: border-box;
         display: inline-block;
-        padding: 16px 15px; 
+        padding: 16px 0; 
 
             @media (min-width: 768px) {
-                padding: 26px 15px;
+                padding: 26px 0;
             }
 
             @media (min-width: 1200px) {
