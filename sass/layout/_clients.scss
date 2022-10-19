@@ -8,7 +8,7 @@
     }
 
     &__heading {
-        @extend %sectionHeading;
+        @extend %sectionHeading !optional;
         
         @media (max-width: 1200px) {
             margin-bottom: 30px;
