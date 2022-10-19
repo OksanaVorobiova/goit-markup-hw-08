@@ -1062,7 +1062,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 15px;
 }
 @media (min-width: 1200px) {
   .client-list {

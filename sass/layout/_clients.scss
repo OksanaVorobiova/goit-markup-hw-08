@@ -15,7 +15,6 @@
         font-size: 28px;
     }
     }
-
 }
 
 .client-list {
@@ -23,7 +22,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 15px;
 
     @media (min-width: 1200px) {
         flex-wrap: nowrap;
