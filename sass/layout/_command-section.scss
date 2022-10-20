@@ -2,7 +2,10 @@
     @extend %section;
     background-color: $secondaryButtonColor;
     padding-top: 60px;
-    padding-bottom: 60px;
+
+    @media (min-width: 1200px) {
+        padding-top: 94px;
+    }
 
         &__heading {
             font-weight: 700;
@@ -23,6 +26,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    padding-bottom: 60px;
 
     @media (min-width: 768px) {
        display: flex;
@@ -32,9 +36,11 @@
        align-content: space-between;
    }
 
-   // @media (min-width: 1200px) {
-    //    height: 429px;
-    //}
+   @media (min-width: 1200px) {
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-bottom: 94px;
+    }
 }
 
 .command-list__item {
@@ -48,16 +54,16 @@
     }
 
    @media (min-width: 768px) {
-    // flex-basis: calc((100% - 30px) / 2);
-     //max-width: 354px;
+    flex-basis: calc((100% - 30px) / 2);
+    max-width: 354px;
     }
 
-   // @media (min-width: 1200px) {
-    //    flex-basis: calc((100% - 3 * 30px) / 4);
-     //   max-width: 270px;
-      //  margin-bottom: 0;
-      //  height: 429px;
-   // }
+   @media (min-width: 1200px) {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+    min-width: 270px;
+    max-width: 270px; 
+    height: 429px;
+   }
 }
 
 .member-description {
@@ -66,9 +72,9 @@
     padding-bottom: 24px;
     padding-top: 30px;
 
-   // @media (min-width: 1200px) {
-  //      padding-bottom: 30px;
-  //  }
+   @media (min-width: 1200px) {
+      padding-bottom: 30px;
+    }
 
     &__name {
         margin: 0 auto 10px auto;
@@ -129,4 +135,4 @@
     &:focus {
         fill: $primaryColor;
     }
-}
+} 
