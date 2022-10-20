@@ -168,6 +168,26 @@ body {
 
 .image {
   display: block;
+  max-width: 100%;
+}
+
+.member-image {
+  max-width: 100%;
+}
+@media (min-width: 480px) {
+  .member-image {
+    max-height: 460px;
+  }
+}
+@media (min-width: 768px) {
+  .member-image {
+    max-height: 374px;
+  }
+}
+@media (min-width: 1200px) {
+  .member-image {
+    max-height: 260px;
+  }
 }
 
 .container {
@@ -753,11 +773,6 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-@media (min-width: 1200px) {
-  .command-section {
-    padding: 94px 0;
-  }
-}
 .command-section__heading {
   font-weight: 700;
   font-size: 28px;
@@ -772,11 +787,25 @@ body {
   }
 }
 
+.command-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
 @media (min-width: 768px) {
   .command-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: 30px;
@@ -784,54 +813,23 @@ body {
         align-content: space-between;
   }
 }
-@media (min-width: 1200px) {
-  .command-list {
-    height: 429px;
-  }
-}
 
 .command-list__item {
   background-color: #fff;
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  width: 100%;
-  height: 100%;
-}
-@media (max-width: 768px) {
-  .command-list__item:not(:last-child) {
-    margin-bottom: 30px;
-  }
+  min-width: 320px;
 }
 @media (min-width: 480px) {
   .command-list__item {
-    width: 100%;
+    max-width: 450px;
   }
 }
-@media (min-width: 768px) {
-  .command-list__item {
-    -ms-flex-preferred-size: calc((100% - 30px) / 2);
-        flex-basis: calc((100% - 30px) / 2);
-  }
-}
-@media (min-width: 1200px) {
-  .command-list__item {
-    -ms-flex-preferred-size: calc((100% - 90px) / 4);
-        flex-basis: calc((100% - 90px) / 4);
-    margin-bottom: 0;
-    height: 429px;
-  }
-}
-
 .member-description {
   width: 100%;
   text-align: center;
   padding-bottom: 24px;
   padding-top: 30px;
-}
-@media (min-width: 1200px) {
-  .member-description {
-    padding-bottom: 30px;
-  }
 }
 .member-description__name {
   margin: 0 auto 10px auto;
